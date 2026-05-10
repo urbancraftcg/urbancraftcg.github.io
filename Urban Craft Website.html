@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Craft - Premium Epoxy Furniture & Home Décor</title>
+  <meta name="description" content="Handcrafted premium epoxy furniture and home décor by Urban Craft. Bespoke pieces from Chhattisgarh, India.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="apple-touch-icon" href="assets/img/logo.png">
+  
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-dark: #0f1419;
+      --primary-charcoal: #1a1f2e;
+      --primary-navy: #1e2749;
+      --accent-gold: #d4af37;
+      --accent-champagne: #e8dcc8;
+      --accent-light: #f9f7f4;
+      --text-dark: #0d0d0d;
+      --text-light: #ffffff;
+      --border-color: #2d3547;
+      --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--primary-dark);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    /* HEADER & NAVIGATION */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: rgba(15, 20, 25, 0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+      padding: 1.5rem 0;
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 3rem;
+    }
+
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-gold);
+      transition: var(--transition);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .social-links a {
+      color: var(--accent-gold);
+      font-size: 1.2rem;
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      color: var(--accent-rose-gold);
+      transform: translateY(-2px);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      margin-top: 70px;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, #0f1419 0%, #1e2749 100%);
+      z-index: 1;
+    }
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to right, rgba(15, 20, 25, 0.75), rgba(30, 39, 73, 0.6)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="wood" patternUnits="userSpaceOnUse" width="100" height="100"><rect width="100" height="100" fill="%23d4af37"/><rect width="100" height="100" fill="%23e8dcc8" opacity="0.2"/></pattern></defs><rect width="1200" height="800" fill="%231e2749"/><rect width="1200" height="800" fill="url(%23wood)" opacity="0.12"/></svg>');
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: var(--text-light);
+      max-width: 800px;
+      padding: 0 2rem;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.5rem;
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .hero-content h1 .highlight {
+      color: var(--accent-gold);
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 1rem 2.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: var(--transition);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-primary {
+      background: var(--accent-gold);
+      color: var(--primary-dark);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-rose-gold);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-light);
+      border: 2px solid var(--accent-gold);
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent-gold);
+      color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* SECTION STYLING */
+    section {
+      padding: 5rem 3rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 3rem;
+    }
+
+    /* ABOUT SECTION */
+    .about {
+      background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%);
+      color: var(--text-light);
+    }
+
+    .about-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 400px;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-champagne));
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      background-image: url('assets/img/founders.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .about-image::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(26, 43, 31, 0.1) 2px,
+        rgba(26, 43, 31, 0.1) 4px
+      );
+    }
+
+    .about-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--accent-gold);
+    }
+
+    .about-content p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .founder-tags {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* PROCESS SECTION */
+    .process {
+      background: var(--primary-dark);
+      color: var(--text-light);
+    }
+
+    .process-timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .process-step {
+      background: rgba(212, 175, 55, 0.05);
+      border-left: 3px solid var(--accent-gold);
+      padding: 2rem;
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+
+    .process-step:hover {
+      background: rgba(212, 175, 55, 0.1);
+      transform: translateX(10px);
+    }
+
+    .step-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--accent-gold);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .step-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--accent-light);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .step-description {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.7;
+    }
+
+    /* PRODUCTS SECTION */
+    .products {
+      background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%);
+      color: var(--text-light);
+    }
+
+    .filter-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .filter-btn {
+      background: transparent;
+      color: var(--accent-gold);
+      border: 1px solid var(--accent-gold);
+      padding: 0.6rem 1.5rem;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 0.95rem;
+      font-weight: 500;
+      border-radius: 4px;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--accent-gold);
+      color: var(--primary-dark);
+    }
+
+    .gallery-masonry {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      grid-auto-rows: auto;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      aspect-ratio: 3/4;
+      cursor: pointer;
+      group: 1;
+    }
+
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(5) {
+      grid-column: span 1;
+    }
+
+    .gallery-item-image {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--primary-navy), var(--accent-gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      position: relative;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .gallery-item-image::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(26, 43, 31, 0.1) 2px,
+        rgba(26, 43, 31, 0.1) 4px
+      );
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(15, 20, 25, 0.88);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+      color: var(--text-light);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent-gold);
+    }
+
+    .gallery-category {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* TESTIMONIALS SECTION */
+    .testimonials {
+      background: var(--primary-dark);
+      color: var(--text-light);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .testimonial-card {
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      padding: 2rem;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+
+    .testimonial-card:hover {
+      background: rgba(212, 175, 55, 0.12);
+      transform: translateY(-8px);
+    }
+
+    .stars {
+      color: var(--accent-gold);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .testimonial-text {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(196, 165, 116, 0.2);
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-copper), var(--primary-green));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .author-info h3 {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .author-info p {
+      font-size: 0.85rem;
+      color: var(--accent-gold);
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary-navy), var(--primary-dark));
+      color: var(--text-light);
+      text-align: center;
+      padding: 4rem 3rem;
+    }
+
+    .cta-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent-gold);
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .cta-buttons-group {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0a0d10;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 3rem;
+      text-align: center;
+      border-top: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    footer a {
+      color: var(--accent-gold);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    footer a:hover {
+      color: var(--accent-rose-gold);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .header-container {
+        padding: 0 1.5rem;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 3rem 1.5rem;
+      }
+
+      .about-container {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-container">
+    <a href="#" class="logo">
+      <img src="assets/img/logo.png" alt="Urban Craft Logo" style="height: 80px; width: auto; margin-right: 1rem;">
+      <span style="display: none;">URBAN CRAFT</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="social-links">
+      <a href="https://wa.link/mtvqkn" target="_blank" title="WhatsApp">💬</a>
+      <a href="https://www.instagram.com/urbancraftcg/" target="_blank" title="Instagram">📸</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-background"></div>
+  <div class="hero-image"></div>
+  <div class="hero-content">
+    <h1>Bespoke <span class="highlight">Epoxy Furniture</span> Crafted with Passion</h1>
+    <p>Premium handmade pieces designed for those who appreciate artistry, quality, and individuality. Each creation is a unique expression of craftsmanship.</p>
+    <div class="cta-buttons">
+      <a href="tel:+919131742363" class="btn btn-primary">Call: +91 9131742363</a>
+      <a href="https://wa.link/mtvqkn" class="btn btn-primary" target="_blank">WhatsApp Us</a>
+      <a href="#products" class="btn btn-secondary">Explore Collection</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about" id="about">
+  <div class="about-container">
+    <div class="about-image"></div>
+    <div class="about-content">
+      <h2>Crafted by Engineers Who Dream</h2>
+      <p>Gajendra and Shubham are two passionate engineers from Chhattisgarh who transformed their vision of premium furniture into reality. With deep expertise in design and functionality, they've created Urban Craft—a brand synonymous with quality, innovation, and artisanal excellence.</p>
+      <p>What started as a passion project has evolved into a commitment to delivering bespoke furniture that combines engineering precision with artistic vision. Every piece tells a story of meticulous craftsmanship and attention to detail.</p>
+      <div class="founder-tags">
+        <span class="tag">Engineering Excellence</span>
+        <span class="tag">Artisan Crafted</span>
+        <span class="tag">Custom Design</span>
+        <span class="tag">Sustainable</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS SECTION -->
+<section class="process" id="process">
+  <h2 class="section-title">The Craft Behind Every Piece</h2>
+  <p class="section-subtitle">A meticulous journey from concept to creation</p>
+  <div class="process-timeline">
+    <div class="process-step">
+      <div class="step-number">01</div>
+      <div class="step-title">Design & Concept</div>
+      <p class="step-description">We begin with your vision. Our team works closely with you to understand your needs, style preferences, and space requirements. Every design starts as a conversation.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-number">02</div>
+      <div class="step-title">Material Selection</div>
+      <p class="step-description">We source only the finest wood and premium epoxy resins. Quality materials are the foundation of pieces that last generations. Each selection is intentional.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-number">03</div>
+      <div class="step-title">Craftsmanship</div>
+      <p class="step-description">Master artisans hand-craft every piece with precision. From wood preparation to epoxy application and finishing, each step is executed with meticulous care.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-number">04</div>
+      <div class="step-title">Quality Check</div>
+      <p class="step-description">Every finished piece undergoes rigorous inspection. We ensure durability, finish quality, and structural integrity meet our exacting standards.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-number">05</div>
+      <div class="step-title">Delivery & Care</div>
+      <p class="step-description">Your piece arrives safely with detailed care instructions. We provide lifetime support and guidance to ensure your furniture remains beautiful for years to come.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS SECTION -->
+<section class="products" id="products">
+  <h2 class="section-title">Featured Collection</h2>
+  <p class="section-subtitle">Explore our portfolio of bespoke creations</p>
+  
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All Products</button>
+    <button class="filter-btn" data-filter="dining">Dining Table</button>
+    <button class="filter-btn" data-filter="center">Center / Tea Table</button>
+    <button class="filter-btn" data-filter="flooring">Epoxy Flooring</button>
+    <button class="filter-btn" data-filter="doors">Epoxy Doors</button>
+    <button class="filter-btn" data-filter="decor">Home Décor</button>
+  </div>
+
+  <div class="gallery-masonry">
+    <div class="gallery-item" data-category="dining">
+      <div class="gallery-item-image" style="background-image: url('assets/img/gallery/dining-table.jpg')"></div>
+      <div class="gallery-overlay">
+        <div class="gallery-title">8-Seater Epoxy Dining Table</div>
+        <div class="gallery-category">Dining Table</div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="center">
+      <div class="gallery-item-image" style="background-image: url('assets/img/gallery/001.jpg')"></div>
+      <div class="gallery-overlay">
+        <div class="gallery-title">Elegant Tea Table</div>
+        <div class="gallery-category">Center / Tea Table</div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="center">
+      <div class="gallery-item-image" style="background-image: url('assets/img/gallery/002.jpg')"></div>
+      <div class="gallery-overlay">
+        <div class="gallery-title">Premium Center Table</div>
+        <div class="gallery-category">Center / Tea Table</div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="center">
+      <div class="gallery-item-image" style="background-image: url('assets/img/gallery/003.jpg')"></div>
+      <div class="gallery-overlay">
+        <div class="gallery-title">Marble Effect Tea Table</div>
+        <div class="gallery-category">Center / Tea Table</div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="center">
+      <div class="gallery-item-image" style="background-image: url('assets/img/gallery/004.jpg')"></div>
+      <div class="gallery-overlay">
+        <div class="gallery-title">Rustic Center Table</div>
+        <div class="gallery-category">Center / Tea Table</div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="center">
+      <div class="gallery-item-image" style="background-image: url('assets/img/gallery/005.jpg')"></div>
+      <div class="gallery-overlay">
+        <div class="gallery-title">Geometric Design Center Table</div>
+        <div class="gallery-category">Center / Tea Table</div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="flooring">
+      <div class="gallery-item-image" style="background-image: url('assets/img/gallery/flooring-1.jpg')"></div>
+      <div class="gallery-overlay">
+        <div class="gallery-title">Wood Grain Epoxy Flooring</div>
+        <div class="gallery-category">Epoxy Flooring</div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="flooring">
+      <div class="gallery-item-image" style="background-image: url('assets/img/gallery/flooring-2.jpg')"></div>
+      <div class="gallery-overlay">
+        <div class="gallery-title">Marble Effect Epoxy Floor</div>
+        <div class="gallery-category">Epoxy Flooring</div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="decor">
+      <div class="gallery-item-image" style="background-image: url('assets/img/gallery/home-decor.jpg')"></div>
+      <div class="gallery-overlay">
+        <div class="gallery-title">Floral Epoxy Art Piece</div>
+        <div class="gallery-category">Home Décor</div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="decor">
+      <div class="gallery-item-image" style="background-image: url('assets/img/gallery/decor-1.jpg')"></div>
+      <div class="gallery-overlay">
+        <div class="gallery-title">Gold & Marble Epoxy Wall Art</div>
+        <div class="gallery-category">Home Décor</div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="decor">
+      <div class="gallery-item-image" style="background-image: url('assets/img/gallery/decor-2.jpg')"></div>
+      <div class="gallery-overlay">
+        <div class="gallery-title">Turquoise Map Epoxy Art</div>
+        <div class="gallery-category">Home Décor</div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="doors">
+      <div class="gallery-item-image" style="background-image: url('assets/img/gallery/epoxy-door.jpg')"></div>
+      <div class="gallery-overlay">
+        <div class="gallery-title">Blue & Green Epoxy Door</div>
+        <div class="gallery-category">Epoxy Doors</div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="doors">
+      <div class="gallery-item-image" style="background-image: url('assets/img/gallery/door-1.jpg')"></div>
+      <div class="gallery-overlay">
+        <div class="gallery-title">Ocean Blue Barn Door</div>
+        <div class="gallery-category">Epoxy Doors</div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="doors">
+      <div class="gallery-item-image" style="background-image: url('assets/img/gallery/door-2.jpg')"></div>
+      <div class="gallery-overlay">
+        <div class="gallery-title">Wood Grain Double Doors</div>
+        <div class="gallery-category">Epoxy Doors</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Epoxy Flooring Highlight Section -->
+  <div style="margin-top: 5rem; padding: 3rem; background: rgba(212, 175, 55, 0.08); border-left: 4px solid var(--accent-gold); border-radius: 8px;">
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--accent-gold); margin-bottom: 1rem;">Epoxy Flooring Services</h3>
+    <p style="font-size: 1.05rem; color: rgba(255, 255, 255, 0.85); line-height: 1.8; margin-bottom: 1.5rem;">Transform your spaces with premium epoxy flooring solutions. Our expert craftsmen create stunning, durable flooring with custom designs ranging from elegant marble effects to bold geometric patterns. Each installation is tailored to complement your interior aesthetic while providing superior durability and easy maintenance.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+      <div style="background: rgba(212, 175, 55, 0.1); padding: 1.5rem; border-radius: 6px; border: 1px solid rgba(212, 175, 55, 0.2);">
+        <h4 style="color: var(--accent-gold); margin-bottom: 0.5rem;">Ultra-Durable</h4>
+        <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.7);">Built to last with high-grade epoxy resins that resist stains, scratches, and heavy foot traffic.</p>
+      </div>
+      <div style="background: rgba(212, 175, 55, 0.1); padding: 1.5rem; border-radius: 6px; border: 1px solid rgba(212, 175, 55, 0.2);">
+        <h4 style="color: var(--accent-gold); margin-bottom: 0.5rem;">Custom Designs</h4>
+        <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.7);">From marble & granite effects to artistic patterns—fully customizable to your vision.</p>
+      </div>
+      <div style="background: rgba(212, 175, 55, 0.1); padding: 1.5rem; border-radius: 6px; border: 1px solid rgba(212, 175, 55, 0.2);">
+        <h4 style="color: var(--accent-gold); margin-bottom: 0.5rem;">Easy Maintenance</h4>
+        <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.7);">Smooth, seamless surfaces that are simple to clean and maintain for years.</p>
+      </div>
+    </div>
+  </div>
+</section><!-- /Products Section -->
+
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonials" id="testimonials">
+  <h2 class="section-title">Loved by Our Clients</h2>
+  <p class="section-subtitle">Real stories from real customers</p>
+  
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Urban Craft transformed my 100-year-old wooden table with a stunning epoxy finish. The craftsmanship is impeccable, and the quality exceeded all expectations. Truly a masterpiece."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">KC</div>
+        <div class="author-info">
+          <h3>Kumar Chandraker</h3>
+          <p>Resort Owner</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"From concept to delivery, the team was professional and attentive. My custom dining table is the centerpiece of my home. Every detail was perfect."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">RD</div>
+        <div class="author-info">
+          <h3>Ravisha Deshmukh</h3>
+          <p>Interior Designer</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"The attention to detail is remarkable. Not just a piece of furniture—it's functional art. I've already recommended Urban Craft to friends and family."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">AP</div>
+        <div class="author-info">
+          <h3>Arun Patel</h3>
+          <p>Entrepreneur</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section" id="contact">
+  <h2>Ready to Create Something Extraordinary?</h2>
+  <p>Let's bring your vision to life with bespoke furniture that reflects your unique style and personality.</p>
+  <div class="cta-buttons-group">
+    <a href="tel:+919131742363" class="btn btn-primary">Call: +91 9131742363</a>
+    <a href="https://wa.link/mtvqkn" class="btn btn-primary" target="_blank">WhatsApp Us</a>
+    <a href="https://www.instagram.com/urbancraftcg/" class="btn btn-secondary" target="_blank">Follow on Instagram</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 © Urban Craft. All rights reserved.</p>
+  <p>Handcrafted in Chhattisgarh | <a href="tel:+919131742363">Call: +91 9131742363</a> | <a href="https://www.instagram.com/urbancraftcg/">Instagram</a> | <a href="https://wa.link/mtvqkn">WhatsApp</a></p>
+  <p style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(212, 175, 55, 0.1);">
+    <a href="copyright-policy.html">Copyright Policy</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a>
+  </p>
+</footer>
+
+<script>
+  // Product filter functionality
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      const filterValue = button.getAttribute('data-filter');
+      galleryItems.forEach(item => {
+        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+          item.style.display = 'block';
+          setTimeout(() => item.style.opacity = '1', 10);
+        } else {
+          item.style.opacity = '0';
+          setTimeout(() => item.style.display = 'none', 300);
+        }
+      });
+    });
+  });
+
+  // Smooth scroll behavior for navigation
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href !== '#' && document.querySelector(href)) {
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
